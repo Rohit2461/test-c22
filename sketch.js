@@ -16,7 +16,7 @@ function setup() {
   carGroup1 = new Group();
   logGroup1 = new Group();
 
-  player= new Player(width/2,height-25);
+ 
   
 
   for (var i=0;i<6;i++){
@@ -47,7 +47,7 @@ function setup() {
 function draw() {
   background("skyblue");
 
-  translate(0,-player.spt.y+height-150)
+ 
 
   for (i=1;i<logGroup1.length;i++){
     if(logGroup1[i].x<0){
@@ -60,6 +60,10 @@ function draw() {
      carGroup1[i].x=width;
    }
  }
+ 
+  player= new Player(width/2,height-25);
+ 
+  translate(0,-player.spt.y+height-150)
 
   function keyPressed(){
     if(keyCode == UP_ARROW){
